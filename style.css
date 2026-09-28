@@ -10,7 +10,7 @@ html {
     --text-color: #222;
     --secondary-text-color: #666;
     --border-color: #ddd;
-    --link-color: #20C20E;
+    --link-color: #66aaff;
 }
 
 
@@ -172,4 +172,25 @@ footer{
     border-top: 1px solid var(--border-color);
     color: var(--secondary-text-color);
     font-size: 0.9rem;
+}
+
+#theme-toggle{
+    margin-top: 20px;
+    padding: 5px 10px;
+    /*Use font family of the parent element*/
+    font-family: inherit;
+    background: none;
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    cursor: pointer;
+
+}
+
+.dark-mode {
+    /*Renaming variables*/
+    --background-color: #1a1a1a;
+    --text-color: #eeeeee;
+    --secondary-text-color: #aaaaaa;
+    --border-color: #444444;
+    --link-color: #20C20E;
 }
