@@ -12,3 +12,17 @@ body {
 }
     /* Remember, margin is the space outside an element
     padding is space inside an element, between its content and border*/
+
+nav {
+    margin: 30px 0;
+}
+
+nav a {
+    margin-right: 20px;
+    text-decoration: none;
+    color: black;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
