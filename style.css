@@ -84,3 +84,18 @@ nav a:hover {
 .social-links a:hover{
     text-decoration: underline;
 }
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    /*Removes default indentation from <ul>*/
+    padding: 0;
+    /*Removes bullets*/
+    list-style: none;
+}
+
+.skills li{
+    border: 1px solid var(--border-color);
+    padding: 5px 10px;
+}
