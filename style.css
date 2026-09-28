@@ -1,0 +1,14 @@
+body {
+    /* The body can grow to 900px wide, but no wider */
+    max-width: 900px;
+    /* Shorthand for: margin-top and bottom is 40 px, margin-left and right is auto*/
+    margin: 40px auto;
+    /* Add 20px of internal space on the left and right*/
+    padding: 0 20px;
+
+    /* Set font and give vertical breathing room*/
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+    /* Remember, margin is the space outside an element
+    padding is space inside an element, between its content and border*/
