@@ -54,6 +54,14 @@ body {
     /* Remember, margin is the space outside an element
     padding is space inside an element, between its content and border*/
 
+/* since the paragraphs get long under about, shorten the max width here */
+/* # selects the section with id="about" */
+/* diff between class and id is that id specifies one element, whereas class catagorizes elements so the
+    same styling can be reused across multiple elements */
+#about p{
+    max-width: 750px;
+}
+
 nav {
     /* Using flexbox for spacing of children */
     display: flex;
@@ -94,6 +102,7 @@ nav a:hover {
 
 .social-links{
     display: flex;
+    flex-wrap: wrap;
     gap: 15px;
     margin-top: 15px;
 }
