@@ -150,3 +150,12 @@ nav a:hover {
 .project-links a:hover{
     text-decoration: underline;
 }
+
+footer{
+    /* margin creates space at the outside of border, padding creates space inside the border.*/
+    margin-top: 60px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+    color: var(--secondary-text-color);
+    font-size: 0.9rem;
+}
