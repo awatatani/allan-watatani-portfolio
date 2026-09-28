@@ -12,12 +12,26 @@
 
     <header>
         <h1>Allan Watatani</h1>
+
         <p class="subtitle">
             Software Engineer | Cybersecurity | Reverse Engineering
         </p>
+
+        <div class="social-links">
+            <!--target="_blank" opens page in new tab-->
+            <!--rel="noopener norefferer"_blank" is a security practice to prevent newly opened page
+            from receiving an opener reference back to my page and supressing refferer information, respectively-->
+            <a href="https://github.com/awatatani" target="_blank" rel="noopener norefferer">GitHub</a>
+            <a href="https://www.linkedin.com/in/allan-watatani/" target="_blank" rel="noopener norefferer">LinkedIn</a>
+            <a href="mailto:awatatani6402@gmail.com">Email</a>
+            <a href="resume.pdf">Resume</a>
+        </div>
+
     </header>
 
     <nav>
+        <!-- The # means "Find an element on this page with id='about'"-->
+        <!-- Wheras without that, it will open link, navigate elsewhere, etc.-->
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
