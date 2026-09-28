@@ -99,3 +99,25 @@ nav a:hover {
     border: 1px solid var(--border-color);
     padding: 5px 10px;
 }
+
+.experience-header{
+    display: flex;
+    /* Takes all the unused horizontal space and put between children */
+    justify-content: space-between;
+    /* Aligns the children virtically relative to each other */
+    align-items: center;
+}
+
+.experience-header h3{
+    margin: 0
+}
+
+/*Only apply this condition when browswer is narrow*/
+@media (max-width: 600px) {
+    .experience-header{
+        /* Instead of laying out children horizontally, do vertical*/
+        flex-direction: column;
+        /* Put item at the start of cross-axis*/
+        align-items: flex-start;
+    }
+}
