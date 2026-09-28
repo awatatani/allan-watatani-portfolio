@@ -91,6 +91,15 @@ nav a:hover {
     transition: transform 0.2s ease;
 }
 
+.project h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.project p{
+    margin-bottom: 15px;
+}
+
 .project:hover{
     /*Move up by 3xp when hovered*/
     transform: translateY(-3px)
