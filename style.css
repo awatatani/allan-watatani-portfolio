@@ -64,7 +64,14 @@ nav a:hover {
 .project{
     padding: 20px;
     margin-bottom: 20px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--border-color);
+    /*When the transfrm property changes, animate it over 0.2 seconds so change doesn't look abrupt*/
+    transition: transform 0.2s ease;
+}
+
+.project:hover{
+    /*Move up by 3xp when hovered*/
+    transform: translateY(-3px)
 }
 
 .subtitle{
@@ -120,4 +127,26 @@ nav a:hover {
         /* Put item at the start of cross-axis*/
         align-items: flex-start;
     }
+}
+
+.project-tech{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.project-tech span{
+    border: 1px solid var(--border-color);
+    padding: 3px 8px;
+    /*rem is relative to the root <html> font size. 1rem is about 16px*/
+    font-size: 0.9rem;
+}
+
+.project-links a{
+    text-decoration: none;
+}
+
+.project-links a:hover{
+    text-decoration: underline;
 }
