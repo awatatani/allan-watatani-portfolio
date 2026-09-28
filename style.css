@@ -1,20 +1,30 @@
+html {
+    /* TODO: Ensure this behavior actually works*/
+    scroll-behavior: smooth;
+}
+
 /* root is highest-level element of document, the <html> tag*/
 :root {
+    /* off-white */
+    --background-color: #fafafa;
     --text-color: #222;
     --secondary-text-color: #666;
     --border-color: #ddd;
     --link-color: #20C20E;
 }
 
+
 header {
     margin-bottom: 40px
 }
 
 section {
-    margin-bottom: 60px;
+    margin-bottom: 70px;
 }
 
 h1 {
+    /* 2.5rem is about 40px */
+    font-size: 2.5rem;
     margin-bottom: 5px;
 }
 
@@ -36,8 +46,10 @@ body {
 
     /* Set font and give vertical breathing room*/
     font-family: monospace;
+    /*font-size: 1rem;*/
     line-height: 1.6;
-    color: var(--text-color)
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
     /* Remember, margin is the space outside an element
     padding is space inside an element, between its content and border*/
@@ -65,6 +77,8 @@ nav a:hover {
     padding: 20px;
     margin-bottom: 20px;
     border: 1px solid var(--border-color);
+    /*slightly rounded corners*/
+    border-radius: 6px;
     /*When the transfrm property changes, animate it over 0.2 seconds so change doesn't look abrupt*/
     transition: transform 0.2s ease;
 }
