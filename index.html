@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <!-- viewport is to display the page according to the user's screen size -->
@@ -8,131 +9,141 @@
     <!-- Connects the style.css to this html page. rel="stylesheet" let's the browser know it's a stylesheet-->
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body class="dark-mode">
+    <div class="layout">
+        <aside class="sidebar">
 
-    <header>
-        <h1>Allan Watatani</h1>
+            <h1>Allan Watatani</h1>
 
-        <p class="subtitle">
-            Software Engineer | Cybersecurity | Reverse Engineering
-        </p>
-
-        <div class="social-links">
-            <!--target="_blank" opens page in new tab-->
-            <!--rel="noopener norefferer"_blank" is a security practice to prevent newly opened page
-            from receiving an opener reference back to my page and supressing refferer information, respectively-->
-            <a href="https://github.com/awatatani" target="_blank" rel="noopener norefferer">GitHub</a>
-            <a href="https://www.linkedin.com/in/allan-watatani/" target="_blank" rel="noopener norefferer">LinkedIn</a>
-            <a href="mailto:awatatani6402@gmail.com">Email</a>
-            <a href="resume.pdf" target="_blank">Resume</a>
-        </div>
-
-        <button id="theme-toggle">Dark Mode</button>
-    </header>
-
-    <nav>
-        <!-- The # means "Find an element on this page with id='about'"-->
-        <!-- Wheras without that, it will open link, navigate elsewhere, etc.-->
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-    </nav>
-
-    <main>
-        <section id="about">
-            <h2>About Me</h2>
-            <p>
-                I'm a software engineer with a background in computer engineering, cybersecurity,
-                and reverse engineering. I enjoy working across the software stack, from backend apps to low-level systems and binary analysis.
+            <p class="subtitle">
+                <!-- br is line break -->
+                Software Engineer<br>
+                Cybersecurity<br>
+                Reverse Engineering
             </p>
 
-            <p>
-                I enjoy building software, understanding how systems work at a
-                low level, and solving technical problems.
-            </p>
+            <nav>
+                <!-- The # means "Find an element on this page with id='about'"-->
+                <!-- Wheras without that, it will open link, navigate elsewhere, etc.-->
+                <button data-page="about">about_me/</button>
+                <button data-page="about">experience/</button>
+                <button data-page="about">projects/</button>
+                <button data-page="about">contact/</button>
+            </nav>
 
-            <h3>Technologies</h3>
-
-            <ul class="skills">
-                <li>Python</li>
-                <li>C/C++</li>
-                <li>Java</li>
-                <li>Go</li>
-                <li>Linux</li>
-                <li>Docker</li>
-                <li>Git</li>
-            </ul>
-        </section>
-
-        <section id="experience">
-            <h2>Experience</h2>
-
-            <div class="experience-item">
-                <div class="experience-header">
-                    <h3>Cyber Engineer - Cryptic Vector</h3>
-                    <span>2025 - Present</span>
-                </div>
-                <p>
-                    Software engineer working on cybersecurity, reverse engineering,
-                    and software development projects.
-                </p>
+            <div class="social-links">
+                <!--target="_blank" opens page in new tab-->
+                <!--rel="noopener norefferer"_blank" is a security practice to prevent newly opened page
+                from receiving an opener reference back to my page and supressing refferer information, respectively-->
+                <a href="https://github.com/awatatani" target="_blank" rel="noopener norefferer">GitHub</a>
+                <a href="https://www.linkedin.com/in/allan-watatani/" target="_blank" rel="noopener norefferer">LinkedIn</a>
+                <a href="mailto:awatatani6402@gmail.com">Email</a>
+                <a href="resume.pdf" target="_blank">Resume</a>
             </div>
 
-        </section>
+            <button id="theme-toggle">Dark Mode</button>
 
-        <section id="projects">
-            <h2>Projects</h2>
+        </aside>
 
-            <div class="project">
-                <h3>Award Flight Search</h3>
+
+        <main>
+            <section id="about">
+                <h2>About Me</h2>
                 <p>
-                    A tool for comparing airline award availability with equivalent cash fares.
+                    I'm a software engineer with a background in computer engineering, cybersecurity,
+                    and reverse engineering. I enjoy working across the software stack, from backend apps to low-level systems and binary analysis.
                 </p>
 
-                <div class="project-tech">
-                    <!--Difference between span and div is that span is inline by default, div is a block-level element by default-->
-                    <span>Python</span>
-                    <span>REST APIs</span>
-                    <span>PostgreSQL</span>
-                </div>
-
-                <div class="project-links">
-                    <a href="#">GitHub</a>
-                </div>
-            </div>
-
-            <div class="project">
-                <h3>Electric Load Forecasting</h3>
                 <p>
-                    Gradient Boosting Regressor model to forecast hourly electrical loads across 20 zones in the US to predict load patterns.
+                    I enjoy building software, understanding how systems work at a
+                    low level, and solving technical problems.
                 </p>
-                <div class="project-tech">
-                    <span>Python</span>
-                    <span>scikit-learn</span>
+
+                <h3>Technologies</h3>
+
+                <ul class="skills">
+                    <li>Python</li>
+                    <li>C/C++</li>
+                    <li>Java</li>
+                    <li>Go</li>
+                    <li>Linux</li>
+                    <li>Docker</li>
+                    <li>Git</li>
+                </ul>
+            </section>
+
+            <section id="experience">
+                <h2>Experience</h2>
+
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <h3>Cyber Engineer - Cryptic Vector</h3>
+                        <span>2025 - Present</span>
+                    </div>
+                    <p>
+                        Software engineer working on cybersecurity, reverse engineering,
+                        and software development projects.
+                    </p>
                 </div>
 
-                <div class="project-links">
-                    <a href="#">GitHub</a>
+            </section>
+
+            <section id="projects">
+                <h2>Projects</h2>
+
+                <div class="project">
+                    <h3>Award Flight Search</h3>
+                    <p>
+                        A tool for comparing airline award availability with equivalent cash fares.
+                    </p>
+
+                    <div class="project-tech">
+                        <!--Difference between span and div is that span is inline by default, div is a block-level element by default-->
+                        <span>Python</span>
+                        <span>REST APIs</span>
+                        <span>PostgreSQL</span>
+                    </div>
+
+                    <div class="project-links">
+                        <a href="#">GitHub</a>
+                    </div>
                 </div>
-            </div>
+
+                <div class="project">
+                    <h3>Electric Load Forecasting</h3>
+                    <p>
+                        Gradient Boosting Regressor model to forecast hourly electrical loads across 20 zones in the US to predict load patterns.
+                    </p>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>scikit-learn</span>
+                    </div>
+
+                    <div class="project-links">
+                        <a href="#">GitHub</a>
+                    </div>
+                </div>
 
 
-        </section>
+            </section>
 
-        <section id="contact">
-            <h2>Contact</h2>
+            <section id="contact">
+                <h2>Contact</h2>
 
-            <p>
-                Interested in working together or just wanna get in touch?
-                Feel free to reach out!
-            </p>
+                <p>
+                    Interested in working together or just wanna get in touch?
+                    Feel free to reach out!
+                </p>
 
-            <a href="mailto:awatatani6402@gmail.com">awatatani6402@gmail.com</a>
+                <a href="mailto:awatatani6402@gmail.com">awatatani6402@gmail.com</a>
 
-            <p>GitHub | LinkedIn | Email</p>
-        </section>
-    </main>
+                <p>GitHub | LinkedIn | Email</p>
+            </section>
+        </main>
+
+    </div>
+
 
     <footer>
         <p>&copy; 2026 Allan Watatani</p>

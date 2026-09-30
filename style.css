@@ -13,6 +13,46 @@ html {
     --link-color: #66aaff;
 }
 
+.layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 260px;
+    padding: 40px 30px;
+    /*border-right: 1px solid var(--border-color);*/
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.sidebar nav button {
+    background: none;
+    border: none;
+    padding: 0;
+
+    font: inherit;
+    color: var(--link-color);
+
+    cursor: pointer;
+}
+
+.sidebar nav button:hover {
+    text-decoration: underline;
+}
+
+#content {
+    /*Let the content area take up the remaining horizontal space*/
+    flex: 1;
+    padding: 40px;
+    max-width: 900px;
+}
 
 header {
     margin-bottom: 40px
