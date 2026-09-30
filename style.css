@@ -1,3 +1,15 @@
+* {
+    /*By default css using box-sizing: content-box.
+    In the scenario where you do something like
+    width: 260px
+    padding: 30px
+    border: 1px solid
+    
+    the actual width would be 30px left + 30px right + 1px left + 1px right + 260px
+    but with border-box, the declared width includes everything.*/
+    box-sizing: border-box;
+}
+
 html {
     /* TODO: Ensure this behavior actually works*/
     scroll-behavior: smooth;
@@ -14,12 +26,23 @@ html {
 }
 
 .layout {
+    /*making the display flex makes the children flex items
+    By default, the children are block elements, so they will
+    be stacked vertically. The default direction for a flex item
+    is horizontal*/
     display: flex;
+    /*It can become taller if it needs more room.
+    vh is viewport heigh. 1vh is 1% of the viewport height
+    so 100vh means "make .layout at least the entire visible window"*/
     min-height: 100vh;
 }
 
 .sidebar {
+    /*the sidebar should be exactly 260px wide
+    In the #content, we have flex: 1, which will fill out the rest of the horizontal space*/
     width: 260px;
+    /*but because of this padding, it's really like 30 + 260 + 30
+    what can fix that is setting box-sizing: border-box*/
     padding: 40px 30px;
     /*border-right: 1px solid var(--border-color);*/
 }
