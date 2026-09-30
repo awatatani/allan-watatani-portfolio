@@ -35,16 +35,28 @@ html {
     vh is viewport heigh. 1vh is 1% of the viewport height
     so 100vh means "make .layout at least the entire visible window"*/
     min-height: 100vh;
+
+    max-width: 1250px;
+    margin: 0 auto;
 }
 
 .sidebar {
     /*the sidebar should be exactly 260px wide
     In the #content, we have flex: 1, which will fill out the rest of the horizontal space*/
+    /*Because box-sizing: border-box is enabled globally,
+    this 260px includes the sidebar's padding and border.*/
     width: 260px;
-    /*but because of this padding, it's really like 30 + 260 + 30
-    what can fix that is setting box-sizing: border-box*/
+    height: 100vh;
     padding: 40px 30px;
     /*border-right: 1px solid var(--border-color);*/
+
+    /*makes the element stick to one part when scrolled to*/
+    /*Note: i have removed the margin and padding in the body since now the architecture is sidebar and content,
+    there shouldn't be a pad for body anymore*/
+    position: sticky;
+    top: 0px;
+
+    flex-shrink: 0;
 }
 
 .sidebar nav {
@@ -75,6 +87,7 @@ html {
     flex: 1;
     padding: 40px;
     max-width: 900px;
+    /*margin: 40px auto;*/
 }
 
 header {
@@ -101,11 +114,12 @@ h3 {
 
 body {
     /* The body can grow to 900px wide, but no wider */
-    max-width: 900px;
+    /*max-width: 900px;*/
     /* Shorthand for: margin-top and bottom is 40 px, margin-left and right is auto*/
-    margin: 40px auto;
+    /*margin: 40px auto;*/
+    margin: 0;
     /* Add 20px of internal space on the left and right*/
-    padding: 0 20px;
+    /*padding: 0 20px;*/
 
     /* Set font and give vertical breathing room*/
     font-family: monospace;
@@ -249,6 +263,8 @@ nav a:hover {
 footer{
     /* margin creates space at the outside of border, padding creates space inside the border.*/
     margin-top: 60px;
+    margin-left: 100px;
+    margin-right: 100px;
     padding-top: 20px;
     border-top: 1px solid var(--border-color);
     color: var(--secondary-text-color);
