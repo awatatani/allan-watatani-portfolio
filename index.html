@@ -28,10 +28,12 @@
             <nav>
                 <!-- The # means "Find an element on this page with id='about'"-->
                 <!-- Wheras without that, it will open link, navigate elsewhere, etc.-->
+                <!-- data-page is a custom HTML data attribute. Anything with a data- prefix is something that javascript can read later-->
+                <!--custom data-* attributes are exposed in js in .dataset-->
                 <button data-page="about">about_me/</button>
-                <button data-page="about">experience/</button>
-                <button data-page="about">projects/</button>
-                <button data-page="about">contact/</button>
+                <button data-page="experience">experience/</button>
+                <button data-page="projects">projects/</button>
+                <button data-page="contact">contact/</button>
             </nav>
 
             <div class="social-links">
@@ -49,7 +51,7 @@
         </aside>
 
 
-        <main>
+        <main id="content">
             <section id="about">
                 <h2>About Me</h2>
                 <p>
