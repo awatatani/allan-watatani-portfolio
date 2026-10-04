@@ -31,6 +31,7 @@ const content = document.getElementById("content")
 
 async function loadPage(page) {
     try {
+        // content.innerHTML = "<p>Loading...</p>";
         const response = await fetch(`content/${page}.html`);
 
         if (!response.ok) {
