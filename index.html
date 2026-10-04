@@ -3,14 +3,14 @@
 
 <head>
     <meta charset="UTF-8">
-    <!-- viewport is to display the page according to the user's screen size -->
+    <!-- Viewport is to display the page according to the user's screen size -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Allan Watatani</title>
-    <!-- Connects the style.css to this html page. rel="stylesheet" let's the browser know it's a stylesheet-->
+    <!-- Connects the style.css to this html page. rel="stylesheet" let's the browser know it's a stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="dark-mode">
+<body class>
     <div class="layout">
         <!--aside is just a semantic tag for secondary to main
         so <div> instead of <aside> can work here-->
@@ -21,15 +21,15 @@
             <p class="subtitle">
                 <!-- br is line break -->
                 Software Engineer<br>
-                Cybersecurity<br>
-                Reverse Engineering
+                Reverse Engineering<br>
+                Vulnerability Researcher
             </p>
 
             <nav>
-                <!-- The # means "Find an element on this page with id='about'"-->
-                <!-- Wheras without that, it will open link, navigate elsewhere, etc.-->
-                <!-- data-page is a custom HTML data attribute. Anything with a data- prefix is something that javascript can read later-->
-                <!--custom data-* attributes are exposed in js in .dataset-->
+                <!-- The # means "Find an element on this page with id='about'" -->
+                <!-- Wheras without that, it will open link, navigate elsewhere, etc. -->
+                <!-- data-page is a custom HTML data attribute. Anything with a data- prefix is something that javascript can read later -->
+                <!-- custom data-* attributes are exposed in js in .dataset -->
                 <button data-page="about">about_me/</button>
                 <button data-page="experience">experience/</button>
                 <button data-page="projects">projects/</button>
@@ -37,9 +37,9 @@
             </nav>
 
             <div class="social-links">
-                <!--target="_blank" opens page in new tab-->
-                <!--rel="noopener norefferer"_blank" is a security practice to prevent newly opened page
-                from receiving an opener reference back to my page and supressing refferer information, respectively-->
+                <!-- target="_blank" opens page in new tab -->
+                <!-- rel="noopener norefferer"_blank" is a security practice to prevent newly opened page
+                from receiving an opener reference back to my page and supressing refferer information, respectively -->
                 <a href="https://github.com/awatatani" target="_blank" rel="noopener norefferer">GitHub</a>
                 <a href="https://www.linkedin.com/in/allan-watatani/" target="_blank" rel="noopener norefferer">LinkedIn</a>
                 <a href="mailto:awatatani6402@gmail.com">Email</a>

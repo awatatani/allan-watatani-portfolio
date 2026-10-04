@@ -1,20 +1,22 @@
+// ---- Dark Mode Implementation ----
+
 // JS can access HTML elements through DOM (Document Object Model)
 // getElementById searches document for id="theme-toggle" 
 const button = document.getElementById("theme-toggle");
 
 // localStorage is a small key-value storage area provided by the browser for a website
-// it survives page refreshes and browser restarts until it's cleared
+// It survives page refreshes and browser restarts until it's cleared
 const savedTheme = localStorage.getItem("theme");
 
-if (savedTheme == "dark") {
+if (savedTheme === "dark" || savedTheme === null) {
     document.body.classList.add("dark-mode");
 }
 
-//When button recieves clikc, run action
-//Called event driven programming
+// When button recieves click, run action
+// Called event driven programming
 button.addEventListener("click", function () {
-    //Initially, html has <body>. On click, JS adds the class <body class="dark-mode">
-    //Clicking again removes the class.
+    // Initially, html has <body>. On click, JS adds the class <body class="dark-mode">
+    // Clicking again removes the class
     document.body.classList.toggle("dark-mode");
 
     if (document.body.classList.contains("dark-mode")) {
@@ -24,9 +26,9 @@ button.addEventListener("click", function () {
     }
 });
 
+// ---- Dynamic Content Fetch Implementation ----
 
-
-//swapping out content based on sidebar button press
+// Swapping out content based on sidebar button press
 const content = document.getElementById("content")
 
 async function loadPage(page) {
@@ -53,13 +55,15 @@ async function loadPage(page) {
     }
 }
 
-//querySelectorAll uses a css selector to serach the DOM
-//This returns almost like a collection of all the buttons into navButtons
+// ---- Content Selection Indicator Implementation ----
+
+// querySelectorAll uses a css selector to serach the DOM
+// This returns almost like a collection of all the buttons into navButtons
 const navButtons = document.querySelectorAll(".sidebar nav button")
 
-//iterates through navButton (each button under nav) and run the function once
+// Iterates through navButton (each button under nav) and run the function once
 navButtons.forEach(function (button) {
-    //Add a listener to this button. whenever this button is clicked, run this function
+    // Add a listener to this button. whenever this button is clicked, run this function
     button.addEventListener("click", function () {
         // this reads <button data-page="about">
         const page = button.dataset.page;

@@ -13,6 +13,7 @@
 html {
     /* TODO: Ensure this behavior actually works*/
     scroll-behavior: smooth;
+    font-size: 15px
 }
 
 /* root is highest-level element of document, the <html> tag*/
