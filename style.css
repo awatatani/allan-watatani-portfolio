@@ -82,6 +82,11 @@ html {
     text-decoration: underline;
 }
 
+/* When it sees the class="active" tag that js applies, it will apply this */
+.sidebar nav button.active {
+    font-weight: bold;
+}
+
 #content {
     /*Let the content area take up the remaining horizontal space*/
     flex: 1;

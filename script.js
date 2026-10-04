@@ -47,6 +47,25 @@ navButtons.forEach(function (button) {
     button.addEventListener("click", function () {
         // this reads <button data-page="about">
         const page = button.dataset.page;
+
+        // Remove active from every nav button
+        // This utilizes the element's class attribute in the DOM
+        // It becomes smth like:
+        // <button data-page="about" class="active">projects/</button>
+        navButtons.forEach(function (btn) {
+            btn.classList.remove("active");
+        });
+
+        // Apply "active" to current button
+        button.classList.add("active");
+
         loadPage(page);
     });
 });
+
+// Start at about page
+loadPage("about");
+
+// Set "about" button as active
+const defaultButton = document.querySelector('.sidebar nav button[data-page="about"]');
+defaultButton.classList.add("active")
