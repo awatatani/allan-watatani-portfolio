@@ -30,11 +30,26 @@ button.addEventListener("click", function () {
 const content = document.getElementById("content")
 
 async function loadPage(page) {
-    const response = await fetch(`content/${page}.html`)
-    const html = await response.text();
+    try {
+        const response = await fetch(`content/${page}.html`);
 
-    content.innerHTML = html;
+        if (!response.ok) {
+            throw new Error(`HTTP ${response.status}`);
+        }
 
+        const html = await response.text();
+
+        content.innerHTML = html;
+    } catch (error) {
+        console.error(`Failed to load page "${page}":`, error);
+
+        content.innerHTML = `
+            <section>
+                <h2>Error</h2>
+                <p>Unable to load this section.</p>
+            </section>
+        `;
+    }
 }
 
 //querySelectorAll uses a css selector to serach the DOM
