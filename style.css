@@ -296,3 +296,46 @@ footer{
     --border-color: #444444;
     --link-color: #20C20E;
 }
+
+/* Mobile settings*/
+@media (max-width: 700px) {
+    /* Vertical stack the sidebar and content */
+    .layout {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        /* Instead of staying the 260px wide, span the whole width */
+        width: 100%;
+        /* Remove the 100vh rule since we don't want the sidebar to
+        take up the entire height */
+        height: auto;
+        /* Removes the sticky position so it acts normally */
+        position: static;
+        /* Removes the desktop inset that I added */
+        margin-left: 0;
+        /* Reduce padding */
+        padding: 24px 20px;
+    }
+
+    #content {
+        width: 100%;
+        max-width: none;
+        padding: 24px 20px;
+    }
+
+    .sidebar h1 {
+        /* Reduce from 2.5 */
+        font-size: 2rem;
+    }
+    .sidebar nav {
+        /* Change back to row format */
+        flex-direction: row;
+        /* Let's button move on to next row instead of overflowing*/
+        flex-wrap: wrap;
+        /* Vertical gap between buttons, horizontal gap between buttons */
+        gap: 12px 16px;
+        /* Reducing from 30 */
+        margin-top: 20px;
+    }
+}
