@@ -88,6 +88,16 @@ html {
     font-weight: bold;
 }
 
+.right-column {
+    flex: 1;
+    max-width: 900px;
+
+    display: flex;
+    flex-direction: column;
+
+    min-height: 100vh;
+}
+
 #content {
     /*Let the content area take up the remaining horizontal space*/
     flex: 1;
@@ -267,11 +277,10 @@ nav a:hover {
 }
 
 footer{
-    /* margin creates space at the outside of border, padding creates space inside the border.*/
-    margin-top: 60px;
-    margin-left: 100px;
-    margin-right: 100px;
-    padding-top: 20px;
+    /* margin creates space at the outside of border, padding creates space inside the border */
+    margin: 0 20px;
+
+    padding: 10px 40px;
     border-top: 1px solid var(--border-color);
     color: var(--secondary-text-color);
     font-size: 0.9rem;
