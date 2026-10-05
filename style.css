@@ -270,12 +270,19 @@ nav a:hover {
     padding: 5px 10px;
 }
 
+.experience-item {
+    margin-bottom: 2.5rem;
+}
+
 .experience-header{
     display: flex;
     /* Takes all the unused horizontal space and put between children */
     justify-content: space-between;
     /* Aligns the children virtically relative to each other */
-    align-items: center;
+    align-items: baseline;
+    gap: 1rem;
+
+    margin-bottom: 0.8rem;
 }
 
 .experience-header h3{
